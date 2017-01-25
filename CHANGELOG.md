@@ -16,5 +16,5 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - Already finished
 
 [Unreleased]: https://github.com/infsci2560sp17/full-stack-web-BrianKolowitz/compare/v1.2...HEAD
-[v1.2]: https://github.com/infsci2560sp17/full-stack-web-BrianKolowitz/compare/v1.1...v1.2
+[v1.2]: https://github.com/infsci2560sp17/full-stack-web-sew77/commit/6da44312d96680cd1057e8d106addfc759bb4b18
 [v1.1]: https://github.com/infsci2560sp17/full-stack-web-BrianKolowitz/compare/...v1.1
