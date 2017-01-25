@@ -3,14 +3,13 @@
 1. What is the proposed name for your Web application?
     - NBA OldFashion
 2. Who is the target audience for your Web application?
-    - Working professionals with limited time to go to the gym but are health concious.
+    - The international students in U.S who love NBA and their ages are between 23 and 35. 
 3. What problem is it intended to solve for the target audience?
-    - There's hundreds of at home workout programs. Some are better than others, and some aren't very good at all. Sorting through these workouts is a challenge and working professionals don't have a place where they can share experiences. I'll provide workout reviews, individualized recommendations and coaching (for a price), and motiviational material.
+    - There’re thousands international students in U.S who are NBA fans, especially the students age between 23 and 35. They watched NBA in their home countries when they were children. Now, these students grow up and study in the United States. Although there are many NBA games can be watched now, they still want to watch some videos and photos of old NBA games to reactive their childhood memory and enjoy it. However, it is not easy to find the web or resource that includes systemic old NBA videos and photos. I’ll provide the systemic links, photos, review board, recommendations and downloading.
 4. How will it meet the minimum project requirements?
-    - My site will use the freemium model. Most of the content will be freely accessible without a login. If users want to interact with each other, a login will be required which I'll store in my database. I'll also support OAuth2 authentication if the users do not want to create an username and password on my site. Once the user is signed up for the site I'll have 2 roles (free, and paid). Paid users will have access to additional parts of the web site. Paid users will also have to enter payment info. I'll use PayPal for payments. All public data will be accessible through RESTful services. All RESTful services will data in both JSON and XML formats. 
+    - My site will use the freemium model. All the content will be freely watched online and some of content will be charged for downloading according to the copyright. If users want to write comments, a site account will be required for login. If users don’t want to create an account, they still can see the resource online without login. The PayPal will be used for payment method. (Based on what I have learned right now, these are what I think. Since I’m from civil engineering. I am a newbie in this area. I’ll change this proposal and add more things during the learning in this semester.)
 5. Why is your proposed Web application unique or creative beyond simply meeting the minimum requirements?
-     - My site will customize the experience to the users behaviors. I'll track site usage, interactions with others, and content viewed to provide a customized experience. I'll engage active users with advice on how to advance their training. I'll engage inactive users by sending motivational messages encouraging them to join the community.
-
+    - My site will customize the content based on the comments and reviews from the users. The added content will be the wishful for the most users. Also, I’ll absorb the resource that submitted by users who want to share what they like. Meanwhile, there is no website that provide the old fashion NBA game. 
 ## Build status
 
 TODO : Modify to match your project specific Travis Build
