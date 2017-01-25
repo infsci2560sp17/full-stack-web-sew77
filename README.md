@@ -6,6 +6,11 @@ TODO : Please provide a detailed project description.
 
 TODO : Modify to match your project specific Travis Build
 [![Build Status](https://travis-ci.org/infsci2560sp17/full-stack-web-sew77.svg?branch=master)](https://travis-ci.org/infsci2560sp17/full-stack-web-sew77)
+
+## Changelog
+
+[Changelog](CHANGELOG.md)
+
 ## Web Site
     
 TODO : Please provide a link to your web site [Heroku app Link](https://stark-cliffs-46084.herokuapp.com)
