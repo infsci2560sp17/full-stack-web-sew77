@@ -10,6 +10,7 @@
     - My site will use the freemium model. All the content will be freely watched online and some of content will be charged for downloading according to the copyright. If users want to write comments, a site account will be required for login. If users don’t want to create an account, they still can see the resource online without login. The PayPal will be used for payment method. (Based on what I have learned right now, these are what I think. Since I’m from civil engineering. I am a newbie in this area. I’ll change this proposal and add more things during the learning in this semester.)
 5. Why is your proposed Web application unique or creative beyond simply meeting the minimum requirements?
     - My site will customize the content based on the comments and reviews from the users. The added content will be the wishful for the most users. Also, I’ll absorb the resource that submitted by users who want to share what they like. Meanwhile, there is no website that provide the old fashion NBA game. 
+
 ## Build status
 
 TODO : Modify to match your project specific Travis Build
