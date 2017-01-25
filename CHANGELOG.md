@@ -16,5 +16,6 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - Changed link to heroku app
 
 [Unreleased]: https://github.com/infsci2560sp17/full-stack-web-BrianKolowitz/compare/v1.2...HEAD
-[v1.2]: https://github.com/infsci2560sp17/full-stack-web-sew77/commit/6da44312d96680cd1057e8d106addfc759bb4b18
+[v1.2]: https://github.com/infsci2560sp17/full-stack-web-sew77/compare/v1.1...v1.2
 [v1.1]: https://github.com/infsci2560sp17/full-stack-web-sew77/commit/3f1401c0753371b248cf5bbc4fa3b6865878fded
+ https://github.com/infsci2560sp17/full-stack-web-sew77/compare/v1.1...v1.2
