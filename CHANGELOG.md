@@ -6,10 +6,12 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ## [Unreleased (V2.2)]
 ### Added
 - Assignment1.2 Proposal 
+- Assign Git Tags
 
 ## [V2.1] - 2017-01-25
 ### Added
-- Changelog created and linked to Readme.md
+- Changelog created 
+- Linked to Readme.md
 
 ## [V1.0] - 2017-01-18
 ### Added
