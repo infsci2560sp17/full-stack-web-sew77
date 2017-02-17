@@ -13,10 +13,10 @@
                     <th>Name</th>
                     <th>Workout Type</th>
                 </tr>                
-                <tr data-th-each="OldNba : ${dvds}">
-                    <td data-th-text="${OldNBA.id}"></td>
-                    <td data-th-text="${OldNBA.title}"></td>
-                    <td data-th-text="${OldNBA.workoutType}"></td>
+                <tr data-th-each="dvd : ${dvds}">
+                    <td data-th-text="${dvd.id}"></td>
+                    <td data-th-text="${dvd.title}"></td>
+                    <td data-th-text="${dvd.workoutType}"></td>
                 </tr>
             </table>
         </div>

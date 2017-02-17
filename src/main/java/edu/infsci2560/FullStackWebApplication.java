@@ -1,8 +1,8 @@
 package edu.infsci2560;
 
-import edu.infsci2560.models.OldNBA;
-import edu.infsci2560.models.OldNBA.WorkoutType;
-import edu.infsci2560.repositories.OldNbaRepository;
+import edu.infsci2560.models.Dvd;
+import edu.infsci2560.models.Dvd.WorkoutType;
+import edu.infsci2560.repositories.DvdRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,11 +19,12 @@ public class FullStackWebApplication {
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(FullStackWebApplication.class, args);
 
-        OldNbaRepository repository = ctx.getBean(OldNbaRepository.class);
-        repository.save(new OldNBA(1L, "P90X", WorkoutType.CrossTrain));
-        repository.save(new OldNBA(2L, "Insanity", WorkoutType.Cardio));
-        repository.save(new OldNBA(3L, "Body Beast", WorkoutType.Strength));
+        DvdRepository repository = ctx.getBean(DvdRepository.class);
+        repository.save(new Dvd(1L, "P90X", WorkoutType.CrossTrain));
+        repository.save(new Dvd(2L, "Insanity", WorkoutType.Cardio));
+        repository.save(new Dvd(3L, "Body Beast", WorkoutType.Strength));
     }
+
 
 //    @Bean
 //    public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
@@ -57,19 +58,19 @@ public class FullStackWebApplication {
 //                log.info("[Database Demo] " + customer.toString());
 //            }
 //            log.info("");
-
-            // fetch an individual customer by ID
+//
+//            // fetch an individual customer by ID
 //            Customer customer = repository.findOne(1L);
 //            log.info("[Database Demo] Customer found with findOne(1L):");
 //            log.info("[Database Demo] --------------------------------");
-//            log.info("[Database Demo] " + customer.toString());            
-
-            // fetch customers by last name
+//            log.info("[Database Demo] " + customer.toString());
+//
+//            // fetch customers by last name
 //            log.info("[Database Demo] Customer found with findByLastName('Bauer'):");
 //            log.info("[Database Demo] --------------------------------------------");
 //            for (Customer bauer : repository.findByLastName("Bauer")) {
 //                log.info("[Database Demo] " + bauer.toString());
-//            }            
+//            }
 //        };
 //    }
 }

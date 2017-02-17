@@ -5,8 +5,8 @@
  */
 package edu.infsci2560.controllers;
 
-import edu.infsci2560.models.OldNBA;
-import edu.infsci2560.repositories.OldNbaRepository;
+import edu.infsci2560.models.Dvd;
+import edu.infsci2560.repositories.DvdRepository;
 import javax.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
@@ -25,9 +25,9 @@ import org.springframework.web.servlet.ModelAndView;
  * @author kolobj
  */
 @Controller
-public class OldNbaController {
+public class DvdsController {
     @Autowired
-    private OldNbaRepository repository;
+    private DvdRepository repository;
     
     @RequestMapping(value = "dvds", method = RequestMethod.GET)
     public ModelAndView index() {        
@@ -35,7 +35,7 @@ public class OldNbaController {
     }
     
     @RequestMapping(value = "dvds/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
-    public ModelAndView create(@ModelAttribute @Valid OldNBA dvd, BindingResult result) {
+    public ModelAndView create(@ModelAttribute @Valid Dvd dvd, BindingResult result) {
         repository.save(dvd);
         return new ModelAndView("dvds", "dvds", repository.findAll());
     }
