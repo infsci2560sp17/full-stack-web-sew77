@@ -1,8 +1,8 @@
 package edu.infsci2560;
 
-import edu.infsci2560.models.Dvd;
-import edu.infsci2560.models.Dvd.WorkoutType;
-import edu.infsci2560.repositories.DvdRepository;
+import edu.infsci2560.models.OldNba;
+import edu.infsci2560.models.OldNba.Player;
+import edu.infsci2560.repositories.NbaRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,10 +19,11 @@ public class FullStackWebApplication {
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(FullStackWebApplication.class, args);
 
-        DvdRepository repository = ctx.getBean(DvdRepository.class);
-        repository.save(new Dvd(1L, "SlamDunk", WorkoutType.Old_NBA_Stars));
-        repository.save(new Dvd(2L, "Footwork", WorkoutType.Kobe_Bryant_2016));
-        repository.save(new Dvd(3L, "Crossover", WorkoutType.Tracy_McGrady_2013));
+        NbaRepository repository = ctx.getBean(NbaRepository.class);
+        repository.save(new OldNba(1L, "SlamDunk", Player.Old_NBA_Stars));
+        repository.save(new OldNba(2L, "Footwork", Player.Kobe_Bryant_2016));
+        repository.save(new OldNba(3L, "Crossover", Player.Tracy_McGrady_2013));
+        repository.save(new OldNba(4L, "Final", Player.Tracy_McGrady_2013));
     }
 
 
