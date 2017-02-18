@@ -22,10 +22,16 @@ public class Dvd {
     private static final long serialVersionUID = 1L;
 
     public enum WorkoutType {
-        Unknown,
-        Strength,
-        Cardio,
-        CrossTrain
+        Old_NBA_Stars,
+        Kobe_Bryant_2016,
+        Tracy_McGrady_2013,
+        Allen_Iverson_2011,
+        Shaquille_ONeal_2011,
+        Michael_Jordan_2003,
+        Hakeem_Olajuwon_2002,
+        Charles_Barkley_2000,
+        Magic_Johnson_1996,
+        Wilt_Chamberlain_1973,
     }
 
     @Id
@@ -37,7 +43,7 @@ public class Dvd {
     public Dvd() {
         this.id = Long.MAX_VALUE;
         this.title = null;
-        this.workoutType = WorkoutType.Unknown;
+        this.workoutType = WorkoutType.Old_NBA_Stars;
     }
 
     public Dvd(Long id, String name, WorkoutType workoutType) {

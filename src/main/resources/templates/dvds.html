@@ -2,16 +2,24 @@
 <html>
     <head>
         <title>OldNBA Home</title>
+        <style>
+      
+        table th {
+            background-color: gray;
+            color: white;
+            padding: 5px;
+        }
+        </style>
     </head>
-    <body>
-        <h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s DVD's!</h1>
+    <body style="background-color:lightblue;">
+        <h1 data-th-inline="text" style="text-align:center;">[[${#httpServletRequest.remoteUser}]]'s Records !</h1>
 
         <div>
-            <table style="border: 1px solid black">
+            <table align="left" style="width:50%">
                 <tr>
-                    <th>ID</th>
-                    <th>Name</th>
-                    <th>Workout Type</th>
+                    <th>Num</th>
+                    <th>Action Type</th>
+                    <th>Player</th>
                 </tr>                
                 <tr data-th-each="dvd : ${dvds}">
                     <td data-th-text="${dvd.id}"></td>
@@ -22,19 +30,29 @@
         </div>
         
         <hr />
-        Add DVD<br />
+        </br>
+        </br>
+        Add what you want to see<br /></br>
         <form data-th-action="@{/dvds/add}" name="addDvdForm" method="post">
-            Title: <input type="text" name="title" /><br />
-            Workout Type:<br />
-            <input type="radio" name="workoutType" value="Unknown" checked="checked" /> Unknown<br />
-            <input type="radio" name="workoutType" value="Strength" /> Strength<br />
-            <input type="radio" name="workoutType" value="Cardio" /> Cardio<br />
-            <input type="radio" name="workoutType" value="CrossTrain" /> CrossTrain<br />
-            <input type="submit" value="Add Workout"/>
+            Action Type: <input type="text" name="title" /><br />
+          </br> Player:<br />
+            <input type="radio" name="workoutType" value="Old_NBA_Stars" checked="checked" /> Old_NBA_Stars<br />
+            <input type="radio" name="workoutType" value="Kobe_Bryant_2016" /> Kobe_Bryant_2016<br />
+            <input type="radio" name="workoutType" value="Tracy_McGrady_2013" /> Tracy_McGrady_2013<br />
+            <input type="radio" name="workoutType" value="Allen_Iverson_2011" /> Allen_Iverson_2011<br />
+            <input type="radio" name="workoutType" value="Shaquille_ONeal_2011" /> Shaquille_ONeal_2011<br />
+            <input type="radio" name="workoutType" value="Michael_Jordan_2003" /> Michael_Jordan_2003<br />
+            <input type="radio" name="workoutType" value="Hakeem_Olajuwon_2002" /> Hakeem_Olajuwon_2002<br />
+            <input type="radio" name="workoutType" value="Magic_Johnson_1996" /> Magic_Johnson_1996<br />
+            </br>
+            <input type="submit" value="Add Player"/>
         </form>
+       
+        </p>
         
         <hr />       
-        <form data-th-action="@{/logout}" method="post">
+         <form align"center" data-th-action="@{/logout}" method="post">
+            After finish adding, please sign out.        
             <input type="submit" value="Sign Out"/>
         </form>
     </body>
