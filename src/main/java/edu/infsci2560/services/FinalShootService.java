@@ -1,13 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package edu.infsci2560.services;
 
-import edu.infsci2560.models.OldNba;
-
-import edu.infsci2560.repositories.NbaRepository;
+import edu.infsci2560.models.FinalShoot;
+import edu.infsci2560.models.FinalShoot.FinalShootPlayer;
+import edu.infsci2560.repositories.FinalShootRepository;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -28,27 +23,27 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @author kolobj
  */
 @RestController
-@RequestMapping("/public/api/nbas")
-public class NbaService {
+@RequestMapping("/public/api/finalShoot")
+public class FinalShootService {
 
     @Autowired
-    private NbaRepository repository;
+    private FinalShootRepository repository;
 
     @RequestMapping(method = RequestMethod.GET, produces = "application/json")
-    public ResponseEntity<Iterable<OldNba>> list() {
+    public ResponseEntity<Iterable<FinalShoot>> list() {
         HttpHeaders headers = new HttpHeaders();
         return new ResponseEntity<>(repository.findAll(), headers, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = "application/json")
-    public ResponseEntity<OldNba> list(@PathVariable("id") Long id) {
+    public ResponseEntity<FinalShoot> list(@PathVariable("id") Long id) {
         HttpHeaders headers = new HttpHeaders();
         return new ResponseEntity<>(repository.findOne(id), headers, HttpStatus.OK);
     }
 
     @RequestMapping(method = RequestMethod.POST, consumes="application/json", produces = "application/json")
-    public ResponseEntity<OldNba> create(@RequestBody OldNba nba) {
+    public ResponseEntity<FinalShoot> create(@RequestBody FinalShoot finalShoot) {
         HttpHeaders headers = new HttpHeaders();
-        return new ResponseEntity<>(repository.save(nba), headers, HttpStatus.OK);
+        return new ResponseEntity<>(repository.save(finalShoot), headers, HttpStatus.OK);
     }
 }

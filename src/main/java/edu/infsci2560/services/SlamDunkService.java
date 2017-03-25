@@ -1,13 +1,8 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package edu.infsci2560.services;
 
-import edu.infsci2560.models.OldNba;
-
-import edu.infsci2560.repositories.NbaRepository;
+import edu.infsci2560.models.SlamDunk;
+import edu.infsci2560.models.SlamDunk.SlamDunkPlayer;
+import edu.infsci2560.repositories.SlamDunkRepository;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -28,27 +23,27 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @author kolobj
  */
 @RestController
-@RequestMapping("/public/api/nbas")
-public class NbaService {
+@RequestMapping("/public/api/slams")
+public class SlamDunkService {
 
     @Autowired
-    private NbaRepository repository;
+    private SlamDunkRepository repository;
 
     @RequestMapping(method = RequestMethod.GET, produces = "application/json")
-    public ResponseEntity<Iterable<OldNba>> list() {
+    public ResponseEntity<Iterable<SlamDunk>> list() {
         HttpHeaders headers = new HttpHeaders();
         return new ResponseEntity<>(repository.findAll(), headers, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET, produces = "application/json")
-    public ResponseEntity<OldNba> list(@PathVariable("id") Long id) {
+    public ResponseEntity<SlamDunk> list(@PathVariable("id") Long id) {
         HttpHeaders headers = new HttpHeaders();
         return new ResponseEntity<>(repository.findOne(id), headers, HttpStatus.OK);
     }
 
     @RequestMapping(method = RequestMethod.POST, consumes="application/json", produces = "application/json")
-    public ResponseEntity<OldNba> create(@RequestBody OldNba nba) {
+    public ResponseEntity<SlamDunk> create(@RequestBody SlamDunk slam) {
         HttpHeaders headers = new HttpHeaders();
-        return new ResponseEntity<>(repository.save(nba), headers, HttpStatus.OK);
+        return new ResponseEntity<>(repository.save(slam), headers, HttpStatus.OK);
     }
 }

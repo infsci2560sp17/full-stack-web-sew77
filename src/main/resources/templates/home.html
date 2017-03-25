@@ -1,16 +1,34 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>OldNBA Fans Home</title>
+        <title>Old NBA</title>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
+        <link rel="stylesheet" href="https://www.w3schools.com/lib/w3.css"/>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway"/>
         <style>
-      
-        
+            body,h1 {font-family: "Raleway", sans-serif}
+            body, html {height: 100%}
+            .bgimg {
+                background-image: url('https://i.ytimg.com/vi/zmLAbv3cwiE/maxresdefault.jpg');
+                min-height: 100%;
+                background-position: center;
+                background-size: cover;
+            }
+            
         </style>
     </head>
-    <body style="background-color:lightblue">
-        
-        <h1 style="text-align:center;font-family:verdana;">Welcome to OldNBA Fans Home</h1>
-        <p style="text-align:center;">There are a lot of resource for you to watch!</p>
-        <p style="text-align:center;font-family:courier;">Click <a data-th-href="@{/nbas}">here</a> to add what you want to see</p>
+    
+    <body>
+        <div class="bgimg w3-display-container w3-animate-opacity w3-text-white">
+        <div class="w3-display-topleft w3-padding-large w3-xlarge">
+            
+        </div>
+        <div class="w3-display-top">
+            <h1 class="w3-jumbo w3-animate-middle">Reactive Your Memory of Old NBA</h1>
+            
+            <p class="w3-large w3-center"><a data-th-href="@{/main}">Come</a> to the MEMORY WORLD now!!!</p>
+        </div>
+        </div>
     </body>
 </html>

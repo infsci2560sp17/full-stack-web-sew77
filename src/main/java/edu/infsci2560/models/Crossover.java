@@ -1,14 +1,11 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package edu.infsci2560.models;
+
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Column;
 import org.apache.commons.lang3.builder.EqualsBuilder;
 import org.apache.commons.lang3.builder.HashCodeBuilder;
 
@@ -17,12 +14,11 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
  * @author kolobj
  */
 @Entity
-public class Dvd {
+public class Crossover {
 
-    private static final long serialVersionUID = 1L;
+    //private static final long serialVersionUID = 1L;
 
-    public enum WorkoutType {
-        Old_NBA_Stars,
+    public enum CrossoverPlayer {
         Kobe_Bryant_2016,
         Tracy_McGrady_2013,
         Allen_Iverson_2011,
@@ -32,29 +28,31 @@ public class Dvd {
         Charles_Barkley_2000,
         Magic_Johnson_1996,
         Wilt_Chamberlain_1973,
+        others,
     }
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected Long id;
-    protected String title;
-    protected WorkoutType workoutType;
+    protected CrossoverPlayer crossoverPlayer;
+    @Column(length = 4096)
+    protected String links;
 
-    public Dvd() {
+    public Crossover() {
         this.id = Long.MAX_VALUE;
-        this.title = null;
-        this.workoutType = WorkoutType.Old_NBA_Stars;
+        this.crossoverPlayer = CrossoverPlayer.others;
+        this.links = null;
     }
 
-    public Dvd(Long id, String name, WorkoutType workoutType) {
+    public Crossover(Long id, CrossoverPlayer crossoverPlayer, String links) {
         this.id = id;
-        this.title = name;
-        this.workoutType = workoutType;
+        this.crossoverPlayer = crossoverPlayer;
+        this.links = links;
     }
 
     @Override
     public String toString() {
-        return "[ id=" + this.id + ", title=" + this.title + ", workoutType=" + this.workoutType + " ]";
+        return "[ id=" + this.id + ", SlamDunkPlayer=" + this.crossoverPlayer + ", VideoLinks=" + this.links + " ]";
     }
 
     @Override
@@ -68,31 +66,31 @@ public class Dvd {
     }
 
     /**
-     * @return the name
+     * @return the crossoverPlayer
      */
-    public String getTitle() {
-        return title;
+    public CrossoverPlayer getCrossoverPlayer() {
+        return crossoverPlayer;
     }
 
     /**
-     * @param title the name to set
+     * @param set the crossoverPlayer
      */
-    public void setTitle(String title) {
-        this.title = title;
+    public void setCrossoverPlayer(CrossoverPlayer name) {
+        this.crossoverPlayer = name;
     }
 
     /**
-     * @return the workoutType
+     * @return the links
      */
-    public WorkoutType getWorkoutType() {
-        return workoutType;
+    public String getLinks() {
+        return links;
     }
 
     /**
-     * @param workoutType the workoutType to set
+     * @param set the links
      */
-    public void setWorkoutType(WorkoutType workoutType) {
-        this.workoutType = workoutType;
+    public void setLinks(String links) {
+        this.links = links;
     }
 
     /**

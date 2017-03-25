@@ -1,8 +1,20 @@
 package edu.infsci2560;
 
 import edu.infsci2560.models.OldNba;
-import edu.infsci2560.models.OldNba.Player;
+
 import edu.infsci2560.repositories.NbaRepository;
+
+import edu.infsci2560.models.SlamDunk;
+import edu.infsci2560.models.SlamDunk.SlamDunkPlayer;
+import edu.infsci2560.repositories.SlamDunkRepository;
+
+import edu.infsci2560.models.Crossover;
+import edu.infsci2560.models.Crossover.CrossoverPlayer;
+import edu.infsci2560.repositories.CrossoverRepository;
+
+import edu.infsci2560.models.FinalShoot;
+import edu.infsci2560.models.FinalShoot.FinalShootPlayer;
+import edu.infsci2560.repositories.FinalShootRepository;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -10,6 +22,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
 public class FullStackWebApplication {
@@ -19,11 +32,29 @@ public class FullStackWebApplication {
     public static void main(String[] args) {
         ApplicationContext ctx = SpringApplication.run(FullStackWebApplication.class, args);
 
-        NbaRepository repository = ctx.getBean(NbaRepository.class);
-        repository.save(new OldNba(1L, "SlamDunk", Player.Old_NBA_Stars));
-        repository.save(new OldNba(2L, "Footwork", Player.Kobe_Bryant_2016));
-        repository.save(new OldNba(3L, "Crossover", Player.Tracy_McGrady_2013));
-        repository.save(new OldNba(4L, "Final", Player.Tracy_McGrady_2013));
+        NbaRepository nbaRepository = ctx.getBean(NbaRepository.class);
+        nbaRepository.save(new OldNba(1L, "SlamDunk", "Old_NBA_Stars", "URL Links:xxxxxxxxxxxxxx"));
+        nbaRepository.save(new OldNba(2L, "Footwork", "Kobe_Bryant_2016", "https://www.youtube.com/watch?v=rDcHUyYhRHM"));
+        nbaRepository.save(new OldNba(3L, "Crossover", "Tracy_McGrady_2013", "https://www.youtube.com/watch?v=DHrBXuJuL2w"));
+        nbaRepository.save(new OldNba(4L, "Final", "Tracy_McGrady_2013", "https://www.youtube.com/watch?v=nfurCV1FDpM"));
+        
+        SlamDunkRepository slamDunkRepository = ctx.getBean(SlamDunkRepository.class);
+        slamDunkRepository.save(new SlamDunk(1L, SlamDunkPlayer.Kobe_Bryant_2016, "https://www.youtube.com/watch?v=UqVibdD3UqA"));
+        slamDunkRepository.save(new SlamDunk(2L, SlamDunkPlayer.Tracy_McGrady_2013, "https://www.youtube.com/watch?v=cWKaCiIhG0w"));
+        slamDunkRepository.save(new SlamDunk(3L, SlamDunkPlayer.Shaquille_ONeal_2011, "https://www.youtube.com/watch?v=O_xZyNihY2M"));
+        
+        
+        CrossoverRepository crossOverRepository = ctx.getBean(CrossoverRepository.class);
+        crossOverRepository.save(new Crossover(1L, CrossoverPlayer.Allen_Iverson_2011, "https://www.youtube.com/watch?v=afQlPAIfVjc"));
+        crossOverRepository.save(new Crossover(2L, CrossoverPlayer.Kobe_Bryant_2016, "https://www.youtube.com/watch?v=rtdFJvGF3UA"));
+        crossOverRepository.save(new Crossover(3L, CrossoverPlayer.Tracy_McGrady_2013, "https://www.youtube.com/watch?v=DHrBXuJuL2w"));
+        crossOverRepository.save(new Crossover(4L, CrossoverPlayer.Michael_Jordan_2003, "https://www.youtube.com/watch?v=0S6mh7RYcqc"));
+        
+        FinalShootRepository finalShootRepository = ctx.getBean(FinalShootRepository.class);
+        finalShootRepository.save(new FinalShoot(1L, FinalShootPlayer.Michael_Jordan_2003, "https://www.youtube.com/watch?v=8V_1ZxCN3nI"));
+        finalShootRepository.save(new FinalShoot(2L, FinalShootPlayer.Kobe_Bryant_2016, "https://www.youtube.com/watch?v=gi8hXrfGsm4"));
+        finalShootRepository.save(new FinalShoot(3L, FinalShootPlayer.Tracy_McGrady_2013, "https://www.youtube.com/watch?v=tp6TsTeYJBw"));
+        finalShootRepository.save(new FinalShoot(4L, FinalShootPlayer.Allen_Iverson_2011, "https://www.youtube.com/watch?v=KuW-QG2vRtY"));
     }
 
 

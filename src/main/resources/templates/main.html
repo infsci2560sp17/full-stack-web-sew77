@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Main page</title>
+    </head>
+    <body>
+        <h1 data-th-inline="text">Hello, [[${#httpServletRequest.remoteUser}]] welcome to the Memory World!</h1>
+
+        <hr />
+	<img src="http://cdn-s3.si.com/s3fs-public/2013/02/dwight-howard-dunk.jpg" style="width:450px;height:240px;"/>
+        <div>See amazing slamdunk click <a data-th-href="@{/slams}">here</a> ! </div>
+        
+        <hr />
+	<img src="http://cdn-s3.si.com/s3fs-public/styles/marquee_large_2x/public/2016/10/17/michael-jordan-allen-iverson-crossover.jpg?itok=Uy9D_PtI" style="width:450px;height:240px;"/>
+        <div>Want ankle breaker? come <a data-th-href="@{/crossover}">here</a> ! </div>
+
+        <hr />
+	<img src="http://stmedia.startribune.com/images/MAVERICKS_TIMBERWOLVES_BASKETBALL_381416871.JPG" style="width:450px;height:240px;"/>
+        <div>The shock moment, come <a data-th-href="@{/finalShoot}">here</a> ! </div>
+        
+        <hr />  
+        <div>Want something more or share your experience click <a data-th-href="@{/nbas}">here</a> ! </div>
+        
+        <hr /> 
+        <form data-th-action="@{/logout}" method="post">
+            <input type="submit" value="Sign Out"/>
+        </form>
+    </body>
+</html>

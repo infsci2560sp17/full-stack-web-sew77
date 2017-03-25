@@ -19,42 +19,36 @@ import org.apache.commons.lang3.builder.HashCodeBuilder;
 @Entity
 public class OldNba {
 
-    private static final long serialVersionUID = 1L;
-
-    public enum Player {
-        Old_NBA_Stars,
-        Kobe_Bryant_2016,
-        Tracy_McGrady_2013,
-        Allen_Iverson_2011,
-        Shaquille_ONeal_2011,
-        Michael_Jordan_2003,
-        Hakeem_Olajuwon_2002,
-        Charles_Barkley_2000,
-        Magic_Johnson_1996,
-        Wilt_Chamberlain_1973,
+   // private static final long serialVersionUID = 1L;
+/*
+   public enum Player {
+    
     }
-
+    */
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     protected Long id;
     protected String title;
-    protected Player player;
+    protected String player;
+    protected String links;
 
     public OldNba() {
         this.id = Long.MAX_VALUE;
         this.title = null;
-        this.player = Player.Old_NBA_Stars;
+        this.player = null;
+        this.links = null;
     }
 
-    public OldNba(Long id, String name, Player playername) {
+    public OldNba(Long id, String type, String playername, String links) {
         this.id = id;
-        this.title = name;
+        this.title = type;
         this.player = playername;
+        this.links = links;
     }
 
     @Override
     public String toString() {
-        return "[ id=" + this.id + ", title=" + this.title + ", workoutType=" + this.player + " ]";
+        return "[ id=" + this.id + ", title=" + this.title + ", workoutType=" + this.player +", URL Link="+this.links + " ]";
     }
 
     @Override
@@ -84,14 +78,14 @@ public class OldNba {
     /**
      * @return the workoutType
      */
-    public Player getPlayer() {
+    public String getPlayer() {
         return player;
     }
 
     /**
      * @param workoutType the workoutType to set
      */
-    public void setPlayer(Player workoutType) {
+    public void setPlayer(String workoutType) {
         this.player = workoutType;
     }
 
@@ -107,6 +101,20 @@ public class OldNba {
      */
     public void setId(Long id) {
         this.id = id;
+    }
+    
+     /**
+     * @param links the links to set
+     */
+    public void setLinks(String links) {
+        this.links = links;
+    }
+    
+     /**
+     * @return the links
+     */
+    public String getLinks() {
+        return links;
     }
 
 }
