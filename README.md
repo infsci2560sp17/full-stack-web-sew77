@@ -26,21 +26,23 @@
 
 ## Key Features
 
-TODO : Please list key features of your project.
-
-* Key Feature 1
-* Key Feature 2
-* Key Feature N
+* Users need password to login 
+* Directory main page
+* Adding options by userself
+* User can share his or her own likes
 
 ## Project Details
 
 ### Landing Page
 
-TODO : please provide a description of your landing page inluding a screen shot ![](https://.../image.JPG)
+In the welcome page(landing page), there is a "come" for users clicking. In order to get the resource, users need to login.
+After login, there are 4 options in main page that users can click and to the page that users like. Also, user can depends on the picture
+which shows the contend in next page to make decission. Last option is a part for users sharing their loves. [](https://.../image.JPG)
 
 ### User Input Form
 
-TODO : please provide a description of at least 1 user input form including a screen shot ![](https://.../image.jpg)
+Users can add their own likes by choosing the player and entering the link of video. After finish typing the information,
+users can uplaod the information to database and it will show on the table above. ![](https://.../image.jpg)
 
 ## API
 
