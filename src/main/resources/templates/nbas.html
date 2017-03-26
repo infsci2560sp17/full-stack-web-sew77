@@ -48,7 +48,23 @@
             The Web Link:<input type="text" name="links" /><br /><br />
             <input type="submit" value="Share My Links"/>
         </form>
-        
+        <br />
+        <br />
+        <form align="center" data-th-action= "@{/nbas/delete}" name="deleteSelect" method="delete">
+            Input the Num to delete: <input type="Num" name="id" /><br />
+            <br />
+            <input type="submit" value="Delete" />
+        </form>
+        <br />
+        <form align="center" data-th-action="@{/nbas/put}" name="putGameForm" method="put">
+            
+            Num: <input type="number" name="id" /><br /><br />
+            Action Type: <input type="text" name="home" /><br /><br />
+            Player: <input type="text" name="away" /><br /><br />
+            Web Link: <input type="text" name="season" /><br /><br />
+     
+            <input type="submit" value="Modify"/>
+        </form>
         </p>
         <hr />  
         <br />     

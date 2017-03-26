@@ -44,17 +44,23 @@
         <p style="text-align:center;">Add more Slam Dunk links<br />
         <form align="center" data-th-action="@{/slams/add}" name="addSlamDunkForm" method="post">
             Links of SlamDunk:<input type="text" name="links" /><br /><br />
-            Player:<br />
-            <input type="radio" name="slamDunkPlayer" value="others" checked="checked" /> others<br />
-            <input type="radio" name="slamDunkPlayer" value="Kobe_Bryant_2016" /> Kobe_Bryant_2016<br />
-            <input type="radio" name="slamDunkPlayer" value="Tracy_McGrady_2013" /> Tracy_McGrady_2013<br />
-            <input type="radio" name="slamDunkPlayer" value="Allen_Iverson_2011" /> Allen_Iverson_2011<br />
-            <input type="radio" name="slamDunkPlayer" value="Shaquille_ONeal_2011" /> Shaquille_ONeal_2011<br />
-            <input type="radio" name="slamDunkPlayer" value="Michael_Jordan_2003" /> Michael_Jordan_2003<br />
-            <input type="radio" name="slamDunkPlayer" value="Hakeem_Olajuwon_2002" /> Hakeem_Olajuwon_2002<br />
-            <input type="radio" name="slamDunkPlayer" value="Magic_Johnson_1996" /> Magic_Johnson_1996<br /><br />
+            Player:<select id="Player" name="slamDunkPlayer">
+                    <option value="Kobe_Bryant_2016">Kobe_Bryant_2016 </option>
+                    <option value="Tracy_McGrady_2013">Tracy_McGrady_2013</option>
+                    <option value="Allen_Iverson_2011">Allen_Iverson_2011</option>
+                    <option value="Shaquille_ONeal_2011">Shaquille_ONeal_2011</option>
+                    <option value="Michael_Jordan_2003">Michael_Jordan_2003</option>
+                    <option value="Hakeem_Olajuwon_2002">Hakeem_Olajuwon_2002</option>
+                    <option value="Magic_Johnson_1996">Magic_Johnson_1996</option>
+                    </select>
+                    <input type="submit" value="Add More"/>
         </form>
-        
+        <br />
+        <br />
+        <form align="center" data-th-action= "@{/slams/delete}" name="deleteSelect" method="delete">
+            Input the Num to delete: <input type="Num" name="id" /><br />
+            <input type="submit" value="Delete" />
+        </form>
         </p>
         <hr />  
         <div align="center"> Go back to <a data-th-href="@{/main}">main page</a> ! </div>

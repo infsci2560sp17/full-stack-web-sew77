@@ -12,6 +12,7 @@ import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -32,6 +33,17 @@ public class CrossoverController {
     @RequestMapping(value = "crossover/add", method = RequestMethod.POST, consumes="application/x-www-form-urlencoded", produces = "application/json")
     public ModelAndView create(@ModelAttribute @Valid Crossover crossover, BindingResult result) {
         repository.save(crossover);
+        return new ModelAndView("crossover", "crossover", repository.findAll());
+    }
+    
+    @RequestMapping(value = "crossover/delete", method = RequestMethod.GET)
+    public ModelAndView deleteCrossover(@RequestParam(value = "id", required=true) Long id) {
+        Crossover crossover = repository.findOne(id);
+        
+        if (crossover != null) {
+            repository.delete(id);
+        }
+
         return new ModelAndView("crossover", "crossover", repository.findAll());
     }
     
