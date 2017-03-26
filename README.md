@@ -37,12 +37,11 @@
 
 In the welcome page(landing page), there is a "come" for users clicking. In order to get the resource, users need to login.
 After login, there are 4 options in main page that users can click and to the page that users like. Also, user can depends on the picture
-which shows the contend in next page to make decission. Last option is a part for users sharing their loves. [](https://.../image.JPG)
-
+which shows the contend in next page to make decission. Last option is a part for users sharing their loves. ![](/src/main/Welcome Page.JPG)
 ### User Input Form
 
 Users can add their own likes by choosing the player and entering the link of video. After finish typing the information,
-users can uplaod the information to database and it will show on the table above. ![](https://.../image.jpg)
+users can uplaod the information to database and it will show on the table above. ![](/src/main/User Input Form.JPG)
 
 ## API
 
