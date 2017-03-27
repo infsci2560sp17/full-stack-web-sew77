@@ -36,6 +36,7 @@
                     <td data-th-text="${nba.title}"></td>
                     <td data-th-text="${nba.player}"></td>
                     <td data-th-text="${nba.links}"></td>
+                    <td><a data-th-href="@{/nbas/edit/{id}(id=${nba.id})}">edit</a></td>
                 </tr>
             </table>
         </div>
@@ -56,15 +57,7 @@
             <input type="submit" value="Delete" />
         </form>
         <br />
-        <form align="center" data-th-action="@{/nbas/put}" name="putGameForm" method="put">
-            
-            Num: <input type="number" name="id" /><br /><br />
-            Action Type: <input type="text" name="home" /><br /><br />
-            Player: <input type="text" name="away" /><br /><br />
-            Web Link: <input type="text" name="season" /><br /><br />
-     
-            <input type="submit" value="Modify"/>
-        </form>
+        
         </p>
         <hr />  
         <br />     

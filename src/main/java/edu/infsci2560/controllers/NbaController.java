@@ -53,14 +53,6 @@ public class NbaController {
         return new ModelAndView("nbas", "nbas", repository.findAll());
     }
     
-    @RequestMapping(value = "/nbas/put", method = RequestMethod.PUT)
-    public ModelAndView updateGame(@RequestParam("id") Long id, @RequestParam String title, @RequestParam String player, @RequestParam String links) {
-        OldNba nbas = repository.findOne(id);
-        nbas.setPlayer(player);
-        nbas.setTitle(title);
-        nbas.setLinks(links);
-
-        return new ModelAndView("nbas", "nbas", repository.findAll());
-    }
+  
     
 }
