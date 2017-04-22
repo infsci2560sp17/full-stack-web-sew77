@@ -22,7 +22,7 @@
 ## Web Site
     
 [OldNBA](https://guarded-fjord-82474.herokuapp.com)
-![](https://www.iconexperience.com/_img/v_collection_png/512x512/shadow/basketball.png)
+
 
 
 ## Key Features
