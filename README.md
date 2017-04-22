@@ -51,8 +51,6 @@ users can uplaod the information to database and it will show on the table above
 
 ## API
 
-TODO : please provide a description of at least 1 API including a sample of request data and response data in both XML and JSON format.
-
 ### API Method 1
 
     POST photos/:id/tags
