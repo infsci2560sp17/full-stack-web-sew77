@@ -3,12 +3,137 @@
     <head>
         <title>OldNBA Share Space</title>
          <style>
+         
+         
+         
+         
+         
+         
+         
+         
+         
+          body,h1{
+                font-family: "Courier",sans-serif
+                color:white;
+            }
+            body{
+                text-align: center;
+                color:white;
+                background: #00ff00 url("http://wallpaper-gallery.net/images/background-wallpaper-for-website/background-wallpaper-for-website-11.jpg") no-repeat fixed center; 
+            }
+         
+          input[type=text] {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px;
+    border-style: solid;
+    background-color: white;
+    border-color: gray;
+    border-radius: 25px;
+    color: gray;
+}
+
+ input[type=Num] {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px;
+    border-style: solid;
+    border-color: gray;
+    background-color: white;
+    border-radius: 25px;
+    color: gray;
+  }  
+    .button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: gray;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px white;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         .nav ul {
+  list-style: none;
+  background-color: #444;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.nav li {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid #888;
+}
+ 
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: .3s background-color;
+}
+ 
+.nav a:hover {
+  background-color: #005f5f;
+}
+ 
+.nav a.active {
+  background-color: #fff;
+  color: #444;
+  cursor: default;
+}
+ 
+@media screen and (min-width: 800px) {
+  .nav li {
+    width: 180px;
+    border-bottom: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;
+  }
+ 
+  /* Option 1 - Display Inline */
+  .nav li {
+    display: inline-block;
+    margin-right: -4px;
+  }
         table tr:nth-child(even) {
-            background-color: #eee;
+            background-color: darkgray;
+            color:white;
             padding: 5px;
         }
         table tr:nth-child(odd) {
-           background-color:#fff;
+           background-color:black;
            padding: 5px;
         }
         table th {
@@ -18,11 +143,23 @@
             padding: 5px
         }
         
-        </style>
+    </style>
     </head>
-    <body style="background-color:yellow">
-        <h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s Records!</h1>
-
+    <body >
+     <header>
+    <div class="nav">
+      <ul>
+        <li class="home"><a data-th-href="@{/main}">Home</a></li>
+        <li class="tutorials"><a data-th-href="@{/slams}">SlamDunk</a></li>
+        <li class="about"><a data-th-href="@{/crossover}">Crossover</a></li>
+        <li class="news"><a data-th-href="@{/finalShoot}">FinalShoot</a></li>
+        <li class="contact"><a class="active" data-th-href="@{/nbas}">ShareSpace</a></li>
+      </ul>
+    </div>
+  </header>
+        
+        <br />
+        <br />
         <div>
             <table align="center" style="border: 2px solid gray; width:40%">
                 <tr>
@@ -47,25 +184,46 @@
             Action Type:<input type="text" name="title" /><br /><br />
             Player Name:<input type="text" name="player" /><br /><br />
             The Web Link:<input type="text" name="links" /><br /><br />
-            <input type="submit" value="Share My Links"/>
+            <button class="button">Share</button>
         </form>
         <br />
         <br />
         <form align="center" data-th-action= "@{/nbas/delete}" name="deleteSelect" method="delete">
             Input the Num to delete: <input type="Num" name="id" /><br />
             <br />
-            <input type="submit" value="Delete" />
+            <button class="button">Delete</button>
         </form>
         <br />
         
         </p>
+        <br />
+        <div align="center" id="demo">
+<h1>What to share with others?</h1>
+<button type="button" onclick="loadDoc()">Give You Some Hints</button>
+</div>
+
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    
+      document.getElementById("demo").innerHTML =
+      this.responseText;
+    
+  };
+  xhttp.open("GET", "hello.txt", true);
+  xhttp.send();
+}
+</script>
         <hr />  
         <br />     
         <div align="center">Go back to <a data-th-href="@{/main}">main page</a> ! </div>
+        <br />
+
         <hr />
         <form align="center" data-th-action="@{/logout}" method="post">
             After finish adding, please sign out.
-            <input type="submit" value="Sign Out"/>
+            <button class="button">Sign Out</button>
         </form>
         <br/>
         <img src="https://myahe.org/wp-content/uploads/2014/06/sharinghands2.jpg" style="width:900px;height:390px;"/>

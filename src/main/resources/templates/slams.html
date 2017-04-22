@@ -2,26 +2,246 @@
 <html>
     <head>
         <title>SlamDunk</title>
+         <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
          <style>
+         
+         
+         
+         
+         
+         
+         input[type=text] {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px;
+    border-style: solid;
+    background-color: white;
+    border-color: gray;
+    border-radius: 25px;
+    color: gray;
+}
+
+ input[type=Num] {
+    width: 20%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px;
+    border-style: solid;
+    border-color: gray;
+    background-color: white;
+    border-radius: 25px;
+    color: gray;
+  }  
+    .button {
+  display: inline-block;
+  padding: 15px 25px;
+  font-size: 18px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  color: #fff;
+  background-color: gray;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px white;
+}
+
+.button:hover {background-color: #3e8e41}
+
+.button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+         
+         
+          .carousel-inner > .item > img,
+            .carousel-inner > .item > a > img {
+                height: 655px;
+                width: 1200px;
+                margin: auto;
+            }
+            body,h1{
+                font-family: "Comic Sans MS",sans-serif
+            }
+            body{
+                text-align: center;
+                color:white;
+                background: #00ff00 url("http://wallpaper-gallery.net/images/background-wallpaper-for-website/background-wallpaper-for-website-11.jpg") no-repeat fixed center; 
+            }
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         
+         .nav ul {
+  list-style: none;
+  background-color: #444;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.nav li {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid #888;
+}
+ 
+.nav a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: .3s background-color;
+}
+ 
+.nav a:hover {
+  background-color: #005f5f;
+}
+ 
+.nav a.active {
+  background-color: #fff;
+  color: #444;
+  cursor: default;
+}
+ 
+@media screen and (min-width: 800px) {
+  .nav li {
+    width: 180px;
+    border-bottom: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;
+  }
+ 
+  /* Option 1 - Display Inline */
+  .nav li {
+    display: inline-block;
+    margin-right: -4px;
+  }
         table tr:nth-child(even) {
-            background-color: #eee;
+            background-color: darkgray;
+            color:black;
             padding: 5px;
         }
         table tr:nth-child(odd) {
-           background-color:#fff;
+           background-color:black;
+           color:black
            padding: 5px;
         }
         table th {
             
             background-color: white;
-            color: darkgray;
+            color: black;
             padding: 5px
         }
-        
-        </style>
+    }
+
+    </style>
     </head>
-    <body style="background-color:lightgreen">
-        <h1 data-th-inline="text">[[${#httpServletRequest.remoteUser}]]'s Amazing Slam Dunk</h1>
+    <body>
+    <header>
+    <div class="nav">
+      <ul>
+        <li class="home"><a data-th-href="@{/main}">Home</a></li>
+        <li class="tutorials"><a class="active" data-th-href="@{/slams}">SlamDunk</a></li>
+        <li class="about"><a data-th-href="@{/crossover}">Crossover</a></li>
+        <li class="news"><a data-th-href="@{/finalShoot}">FinalShoot</a></li>
+        <li class="contact"><a data-th-href="@{/nbas}">ShareSpace</a></li>
+      </ul>
+    </div>
+  </header>
+  
+  
+  
+  <div class="container">
+        <br />
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+            <!-- Indicators -->
+            <ol class="carousel-indicators">
+            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#myCarousel" data-slide-to="1"></li>
+            <li data-target="#myCarousel" data-slide-to="2"></li>
+            <li data-target="#myCarousel" data-slide-to="3"></li>
+            <li data-target="#myCarousel" data-slide-to="4"></li>
+            <li data-target="#myCarousel" data-slide-to="5"></li>
+            </ol>
+  
+  
+  
+  
+  
+  <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="http://wallpaper-gallery.net/images/derrick-rose-wallpapers/derrick-rose-wallpapers-18.jpg" alt="" width="800" height="400" />
+                </div>
+
+                <div class="item">
+                    <img src="http://wallpapercave.com/wp/Ay2zC68.jpg" alt="" width="800" height="400" />
+                </div>
+    
+                <div class="item">
+                    <img src="http://wallpaper.pickywallpapers.com/1366x768/slam-dunk-aftermath.jpg" alt="" width="800" height="400" />
+                </div>
+
+                <div class="item">
+                    <img src="http://i.cdn.turner.com/nba/nba/.element/media/2.0/teamsites/lakers/images/history/shaq/images/shaq34_wallpaper.jpg" alt="" width="800" height="400" />
+                </div>
+
+                <div class="item">
+                    <img src="http://wallpapercave.com/wp/a58an9Z.jpg" alt="" width="800" height="400" />
+                </div>
+                
+                <div class="item">
+                    <img src="http://wallpaper-gallery.net/images/kobe-bryant-wallpapers/kobe-bryant-wallpapers-1.jpg" alt="" width="800" height="400" />
+                </div>
+                
+            </div>
+  
+  
+  			 <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+  </div>
+  
+  
+  
+  
+       <br />
+       <br />
 
         <div>
             <table align="center" style="border: 2px solid gray; width:50%">
@@ -43,7 +263,7 @@
         <br /> 
         <p style="text-align:center;">Add more Slam Dunk links<br />
         <form align="center" data-th-action="@{/slams/add}" name="addSlamDunkForm" method="post">
-            Links of SlamDunk:<input type="text" name="links" /><br /><br />
+            Links of SlamDunk:<input  type="text" name="links" /><br /><br />
             Player:<select id="Player" name="slamDunkPlayer">
                     <option value="Kobe_Bryant_2016">Kobe_Bryant_2016 </option>
                     <option value="Tracy_McGrady_2013">Tracy_McGrady_2013</option>
@@ -53,13 +273,13 @@
                     <option value="Hakeem_Olajuwon_2002">Hakeem_Olajuwon_2002</option>
                     <option value="Magic_Johnson_1996">Magic_Johnson_1996</option>
                     </select>
-                    <input type="submit" value="Add More"/>
+                    <button class="button">Add More</button>
         </form>
         <br />
         <br />
         <form align="center" data-th-action= "@{/slams/delete}" name="deleteSelect" method="delete">
             Input the Num to delete: <input type="Num" name="id" /><br />
-            <input type="submit" value="Delete" />
+            <button class="button">Delete</button>
         </form>
         </p>
         <hr />  
@@ -68,12 +288,9 @@
         <br />     
         <form align="center" data-th-action="@{/logout}" method="post">
             After finish adding, please sign out.
-            <input type="submit" value="Sign Out"/>
+            <button class="button">Sign Out</button>
         </form>
-        <img src="https://static.sportskeeda.com/wp-content/uploads/2016/02/nique1-1455258518-800.jpg" style="width:430px;height:270px;"/>
-        <img src="https://www.thestar.com/content/dam/thestar/sports/basketball/2016/02/13/lavine-defends-dunk-title-on-a-near-perfect-night/zach.jpg" style="width:430px;height:270px;"/>
-        <img src="https://images.solecollector.com/complex/image/upload/emi7o57rgqhwwec3sueh.jpg" style="width:430px;height:270px;"/>
-        <img src="https://s-media-cache-ak0.pinimg.com/originals/66/96/b5/6696b5e91d626cce4ddb06d655d349f4.jpg" style="width:430px;height:270px;"/>
+        
        
     </body>
 </html>
