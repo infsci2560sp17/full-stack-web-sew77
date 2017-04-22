@@ -33,7 +33,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 - Change the OldNba link to new app on heroku
 - Create v1.3 tag for assignment1.3
 
-## [V1.2]
+## [V1.2]- 2017-02-02
 ### Added
 - Assignment1.2 Proposal 
 - Assign Git Tags
