@@ -1,7 +1,7 @@
 # NBA OldFashion
 
 1. What is the proposed name for your Web application?
-    - NBA OldFashion
+    - Old NBBA
 2. Who is the target audience for your Web application?
     - The international students in U.S who love NBA and their ages are between 23 and 35. 
 3. What problem is it intended to solve for the target audience?
